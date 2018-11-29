@@ -1,0 +1,33 @@
+# Checkurl-report
+
+This Project used for check url status,if the url you checked is not response to you,and this project can help remind you via Email or Telegram,and the  supported email is gmail and tencent qq mail.And now let's enjoy it!
+
+Import Tip:
+
+First you should open the function of POP3/SMTP of your qq email !!!
+
+The Smtp address you used,is depended on what type email is  used:
+For example ,if you use qq:
+for enterprise,the addr is:  smtp.exmail.qq.com
+for general ,the addr is: smtp.qq.com 
+#If you are using gmail,the addr:
+general:
+smtp.gmail.com
+
+But you should open settings:
+https://myaccount.google.com/lesssecureapps
+https://accounts.google.com/b/0/displayunlockcaptcha
+
+Gmail's ssl you should set to: 
+smtp.starttls()
+
+#
+The general guide using scripts:
+You should give a argument to the checkurl.sh  shell script.
+like this:
+
+sh checkurl.sh members.3322.org/dyndns/getip 3
+
+If the first argument is empty ,the default value is members.3322.org/dyndns/getip,  the second argument is empty,the default value is 3,or if the second argument is not empty, the second argument will be used as the retry count.
+so :
+[ sh checkurl.sh members.3322.org/dyndns/getip 3 ]   is equal to [ sh checkurl.sh ] 
